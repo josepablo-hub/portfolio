@@ -79,24 +79,6 @@ This architecture allows the robot to maintain a straight trajectory despite mot
 
 ---
 
-## Repository Structure
-
-```
-code/
-│
-├── Core/
-├── Drivers/
-├── STM32 Project Files
-└── STM32CubeMX Configuration (.ioc)
-
-photos/
-final-report/
-presentation/
-videos/
-```
-
----
-
 ## Results
 
 The implemented system successfully demonstrates:
