@@ -1,0 +1,191 @@
+{
+ "profile": {
+  "name": "José Pablo",
+  "photo": "assets/foto.jpg",
+  "cv": "assets/CV.pdf",
+  "linkedin": "https://www.linkedin.com/in/TU-USUARIO",
+  "github": "https://github.com/josepablo-hub",
+  "role": {
+   "es": "Ingeniero en Mecatrónica",
+   "en": "Mechatronics Engineer"
+  },
+  "bio": {
+   "es": "Proyectos de robótica, automatización, sistemas embebidos, control e IA.",
+   "en": "Projects in robotics, automation, embedded systems, control and AI."
+  }
+ },
+ "projects": [
+  {
+   "id": "arduino-goalkeeper-robot",
+   "title": {
+    "en": "Arduino Goalkeeper Robot",
+    "es": "Robot portero Arduino"
+   },
+   "year": "2026",
+   "summary": {
+    "en": "Interactive goalkeeper controlled with a joystick: stepper-driven lateral motion and a solenoid kick, with 3D-printed parts.",
+    "es": "Portero interactivo controlado con joystick: movimiento lateral con motor a pasos y pateo con solenoide, con piezas impresas en 3D."
+   },
+   "tags": [
+    "Arduino",
+    "CAD",
+    "Electrónica",
+    "Mecatrónica"
+   ],
+   "cover": "projects/arduino-goalkeeper-robot/photos/final-product.png",
+   "photos": [
+    "projects/arduino-goalkeeper-robot/photos/assembly.png",
+    "projects/arduino-goalkeeper-robot/photos/cad-case-exploded.png",
+    "projects/arduino-goalkeeper-robot/photos/cad-case.png",
+    "projects/arduino-goalkeeper-robot/photos/cad-whole-structure.png",
+    "projects/arduino-goalkeeper-robot/photos/electronics.png",
+    "projects/arduino-goalkeeper-robot/photos/final-product-inside.png",
+    "projects/arduino-goalkeeper-robot/photos/final-product.png"
+   ],
+   "report": "projects/arduino-goalkeeper-robot/final-report/Evidence_ Final Report_Implementation_Mechatronics_Systems.pdf",
+   "presentation": "projects/arduino-goalkeeper-robot/presentation/Goalkeeper  Final Challenge.pdf",
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/arduino-goalkeeper-robot/code",
+   "video": null
+  },
+  {
+   "id": "autonomous-mobile-robot-stm32",
+   "title": {
+    "en": "Autonomous Mobile Robot (STM32)",
+    "es": "Robot móvil autónomo (STM32)"
+   },
+   "year": "2026",
+   "summary": {
+    "en": "Differential-drive robot with IMU sensor fusion (Madgwick), encoder odometry and a fuzzy-logic controller; runs square paths via Bluetooth.",
+    "es": "Robot diferencial con fusión de sensores IMU (Madgwick), odometría con encoders y control difuso; ejecuta trayectorias cuadradas por Bluetooth."
+   },
+   "tags": [
+    "STM32",
+    "Control difuso",
+    "IMU",
+    "Robótica"
+   ],
+   "cover": "projects/autonomous-mobile-robot-stm32/photos/car-front-view.jpeg",
+   "photos": [
+    "projects/autonomous-mobile-robot-stm32/photos/CAD.jpeg",
+    "projects/autonomous-mobile-robot-stm32/photos/car-front-view.jpeg",
+    "projects/autonomous-mobile-robot-stm32/photos/car-side-view.jpeg",
+    "projects/autonomous-mobile-robot-stm32/photos/telemetry-interphase.jpg"
+   ],
+   "report": "projects/autonomous-mobile-robot-stm32/final-report/Reporte final Automatizacion.pdf",
+   "presentation": "projects/autonomous-mobile-robot-stm32/presentation/AUTONOMOUS CAR.pdf",
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/autonomous-mobile-robot-stm32/code",
+   "video": null
+  },
+  {
+   "id": "thermal-energy-recovery-tractor-heating",
+   "title": {
+    "en": "Thermal Recovery for Tractor Cab Heating",
+    "es": "Recuperación térmica para calefacción de tractor"
+   },
+   "year": "2026",
+   "summary": {
+    "en": "Two-chamber thermal system with analog ON/OFF hysteresis control built with op-amps, thermistor and LM35 sensors.",
+    "es": "Sistema térmico de dos cámaras con control analógico ON/OFF con histéresis hecho con amplificadores operacionales, termistor y sensor LM35."
+   },
+   "tags": [
+    "Control",
+    "Op-Amps",
+    "Térmico",
+    "Electrónica"
+   ],
+   "cover": "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD1.png",
+   "photos": [
+    "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD1.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD2.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/Hystheresis Simulation.jpeg",
+    "projects/thermal-energy-recovery-tractor-heating/photos/Schematics.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/electronics/Electronics.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/electronics/OpAmps Configuration.png"
+   ],
+   "report": "projects/thermal-energy-recovery-tractor-heating/final-report/Evidencia. Ensayo del Reto Control de Temperatura de Tractor con OpAmps.pdf",
+   "presentation": "projects/thermal-energy-recovery-tractor-heating/presentation/Hysteresis Temperature Control Tractor.pdf",
+   "code": null,
+   "video": null
+  },
+  {
+   "id": "rockwell-automated-manufacturing-cell",
+   "title": {
+    "en": "Automated Manufacturing Cell – Rockwell",
+    "es": "Celda de manufactura automatizada – Rockwell"
+   },
+   "year": "2026",
+   "summary": {
+    "en": "Multi-team automation of a manufacturing cell with GuardLogix PLCs, safety PLC, EtherNet/IP, FANUC robots and Cognex vision.",
+    "es": "Automatización multiequipo de una celda de manufactura con PLCs GuardLogix, PLC de seguridad, EtherNet/IP, robots FANUC y visión Cognex."
+   },
+   "tags": [
+    "PLC",
+    "Automatización",
+    "Rockwell",
+    "Seguridad"
+   ],
+   "cover": "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161551.png",
+   "photos": [
+    "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161551.png",
+    "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161631.png",
+    "projects/rockwell-automated-manufacturing-cell/photos/team/Class.jpeg",
+    "projects/rockwell-automated-manufacturing-cell/photos/team/PLC-team.jpeg"
+   ],
+   "report": "projects/rockwell-automated-manufacturing-cell/final-report/Reporte Final (2).pdf",
+   "presentation": "projects/rockwell-automated-manufacturing-cell/presentation/PLC.pdf",
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/rockwell-automated-manufacturing-cell/code",
+   "video": null
+  },
+  {
+   "id": "project-01-inverted-pendulum",
+   "title": {
+    "en": "Inverted Pendulum",
+    "es": "Péndulo invertido"
+   },
+   "year": "2026",
+   "summary": {
+    "en": "Control of an inverted pendulum using state-space methods in MATLAB. (Draft text – to review)",
+    "es": "Control de un péndulo invertido con métodos de espacio de estados en MATLAB. (Texto borrador – por revisar)"
+   },
+   "tags": [
+    "Control",
+    "MATLAB",
+    "Espacio de estados"
+   ],
+   "cover": "projects/project-01-inverted-pendulum/photos/InvertedPendulum.jpeg",
+   "photos": [
+    "projects/project-01-inverted-pendulum/photos/InvertedPendulum.jpeg"
+   ],
+   "report": "projects/project-01-inverted-pendulum/final-report/Inverted Pendulum Final Report.pdf",
+   "presentation": null,
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/project-01-inverted-pendulum/code",
+   "video": null
+  },
+  {
+   "id": "project-02-robotic-arm",
+   "title": {
+    "en": "Robotic Arm with Neural Network",
+    "es": "Brazo robótico con red neuronal"
+   },
+   "year": "2026",
+   "summary": {
+    "en": "Robotic arm project with a neural network developed in Python. (Draft text – to review)",
+    "es": "Proyecto de brazo robótico con una red neuronal desarrollada en Python. (Texto borrador – por revisar)"
+   },
+   "tags": [
+    "Robótica",
+    "IA",
+    "Python"
+   ],
+   "cover": "projects/project-02-robotic-arm/photos/robot.png",
+   "photos": [
+    "projects/project-02-robotic-arm/photos/AI-robot-Image.jpg",
+    "projects/project-02-robotic-arm/photos/robot.png"
+   ],
+   "report": "projects/project-02-robotic-arm/final-report/Evidencia.1. Reporte escrito integrador del reto robots.pdf",
+   "presentation": "projects/project-02-robotic-arm/presentation/M1 Actividad Reto Presentación Final ante SF y evaluación de competencias.pdf",
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/project-02-robotic-arm/code",
+   "video": null
+  }
+ ]
+}
