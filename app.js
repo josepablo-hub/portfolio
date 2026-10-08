@@ -10,7 +10,7 @@ const t = k => TXT[lang][k];
 async function init() {
   $('#y').textContent = new Date().getFullYear();
   try {
-    DATA = await (await fetch('data/projects.json')).json();
+    DATA = await (await fetch('projects.json')).json(); 
   } catch (e) {
     $('#app').innerHTML = '<p style="padding:60px 0">No se pudo cargar data/projects.json. Abre el sitio desde GitHub Pages o con un servidor local (no con doble clic).</p>';
     return;
