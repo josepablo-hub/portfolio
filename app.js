@@ -13,7 +13,7 @@ const tg = g => `<span class="tag">#${tn(g)}</span>`;
 async function init() {
   $('#y').textContent = new Date().getFullYear();
   try {
-    DATA = await (await fetch('projects.json')).json();
+    DATA = await (await fetch('projects.json', { cache: 'no-store' })).json();
   } catch (e) {
     $('#app').innerHTML = '<p style="padding:60px 0">projects.json konnte nicht geladen werden / No se pudo cargar projects.json.</p>';
     return;
