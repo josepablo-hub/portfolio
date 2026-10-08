@@ -78,7 +78,26 @@
    "es": "PLC"
   }
  },
- "certifications": [],
+ "certifications": [  {
+    "type": "certificate",
+    "title": {"de": "Goethe-Zertifikat B2", "en": "Goethe Certificate B2", "es": "Certificado Goethe B2"},
+    "issuer": "Goethe-Institut",
+    "date": "2026",
+    "file": "assets/certificates/GOETHE-ZERTIFIKAT B2.pdf"
+  },
+  {
+    "type": "certificate",
+    "title": {"de": "TOEFL ITP-Ergebnisbericht", "en": "TOEFL ITP Score Report", "es": "Informe de resultados del TOEFL ITP"},
+    "issuer": "TOEFL ITP",
+    "date": "2025",
+    "file": "assets/certificates/TOEFL ITP Score Report.pdf"
+  },
+  {
+    "type": "letter",
+    "title": {"de": "Empfehlungsschreiben", "en": "Recommendation letter", "es": "Carta de recomendación"},
+    "issuer": "Nemak R&D Director Dr. José Talamantes Silva",
+    "file": "assets/certificates/letter_of_recommendation_jose_pablo (JTSilva).pdf"
+  }],
  "projects": [
   {
    "id": "rockwell-automated-manufacturing-cell",
