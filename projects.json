@@ -3,34 +3,249 @@
   "name": "José Pablo",
   "photo": "assets/foto.jpg",
   "cv": "assets/CV.pdf",
-  "linkedin": "https://www.linkedin.com/in/jos%C3%A9-pablo-rodr%C3%ADguez-pinal-837588326/?skipRedirect=true&contentTrackingId=S8vPfQOFThGiSDCGaVOstA%3D%3D&viewName=premium-nav-upsell-text&upsellOrderOrigin=Tracking%3Av1%3Apremium_nav_upsell_text%3ANav%3AIn-Product",
+  "linkedin": "https://www.linkedin.com/in/jos%C3%A9-pablo-rodr%C3%ADguez-pinal-837588326/",
   "github": "https://github.com/josepablo-hub",
   "role": {
-   "es": "Ingeniero en Mecatrónica",
-   "en": "Mechatronics Engineer"
+   "de": "Mechatronik-Student",
+   "en": "Mechatronics Student",
+   "es": "Estudiante de Mecatrónica"
   },
   "bio": {
-   "es": "Proyectos de robótica, automatización, sistemas embebidos, control e IA.",
-   "en": "Projects in robotics, automation, embedded systems, control and AI."
+   "de": "Mexikaner, Student der Mechatronik am Tec de Monterrey, derzeit im Doppelabschluss Smart Automation an der Hochschule Harz. Meine Schwerpunkte: Robotik, Automatisierung, Embedded Systems, Regelungstechnik und KI.",
+   "en": "Mexican Mechatronics student at Tec de Monterrey, currently pursuing a double degree in Smart Automation at Hochschule Harz. My focus: robotics, automation, embedded systems, control and AI.",
+   "es": "Mexicano, estudiante de Mecatrónica en el Tec de Monterrey, actualmente en una doble titulación en Smart Automation en la Hochschule Harz. Me enfoco en robótica, automatización, sistemas embebidos, control e IA."
   }
  },
+ "tagNames": {
+  "Electronics": {
+   "de": "Elektronik",
+   "en": "Electronics",
+   "es": "Electrónica"
+  },
+  "Mechatronics": {
+   "de": "Mechatronik",
+   "en": "Mechatronics",
+   "es": "Mecatrónica"
+  },
+  "FuzzyControl": {
+   "de": "Fuzzy-Regelung",
+   "en": "Fuzzy control",
+   "es": "Control difuso"
+  },
+  "Robotics": {
+   "de": "Robotik",
+   "en": "Robotics",
+   "es": "Robótica"
+  },
+  "Control": {
+   "de": "Regelungstechnik",
+   "en": "Control",
+   "es": "Control"
+  },
+  "OpAmps": {
+   "de": "Operationsverstärker",
+   "en": "Op-amps",
+   "es": "Op-Amps"
+  },
+  "Thermal": {
+   "de": "Thermik",
+   "en": "Thermal",
+   "es": "Térmico"
+  },
+  "Automation": {
+   "de": "Automatisierung",
+   "en": "Automation",
+   "es": "Automatización"
+  },
+  "Safety": {
+   "de": "Sicherheit",
+   "en": "Safety",
+   "es": "Seguridad"
+  },
+  "StateSpace": {
+   "de": "Zustandsraum",
+   "en": "State space",
+   "es": "Espacio de estados"
+  },
+  "AI": {
+   "de": "KI",
+   "en": "AI",
+   "es": "IA"
+  },
+  "PLC": {
+   "de": "SPS",
+   "en": "PLC",
+   "es": "PLC"
+  }
+ },
+ "certifications": [],
  "projects": [
+  {
+   "id": "rockwell-automated-manufacturing-cell",
+   "title": {
+    "de": "Automatisierte Fertigungszelle – Rockwell",
+    "en": "Automated Manufacturing Cell – Rockwell",
+    "es": "Celda de manufactura automatizada – Rockwell"
+   },
+   "year": "2026",
+   "summary": {
+    "de": "Automatisierung einer Fertigungszelle mit SPS, Sicherheits-SPS, EtherNet/IP, FANUC-Robotern und Cognex-Bildverarbeitung.",
+    "en": "Automation of a manufacturing cell with PLCs, safety PLC, EtherNet/IP, FANUC robots and Cognex vision.",
+    "es": "Automatización de una celda de manufactura con PLCs, PLC de seguridad, EtherNet/IP, robots FANUC y visión Cognex."
+   },
+   "long": {
+    "de": "Entstanden im Kurs Manufacturing Systems Automation am Tecnológico de Monterrey in Zusammenarbeit mit Rockwell Automation. Mehrere Teams koordinierten Compact-GuardLogix-Prozess-SPS, eine GuardLogix-Sicherheitssteuerung, EtherNet/IP, Förderbänder, Pneumatik, FANUC-Roboter und Cognex-Bildverarbeitung zu einem sicheren, validierten Produktionsablauf für Transport, Montage und Prüfung eines Bauteils.",
+    "en": "Developed in the Manufacturing Systems Automation course at Tecnológico de Monterrey together with Rockwell Automation. Several teams coordinated Compact GuardLogix process PLCs, a GuardLogix safety PLC, EtherNet/IP networking, conveyors, pneumatics, FANUC robots and Cognex vision into one safe, validated production sequence for transporting, assembling and inspecting a component.",
+    "es": "Desarrollado en el curso Manufacturing Systems Automation del Tecnológico de Monterrey junto con Rockwell Automation. Varios equipos coordinaron PLCs de proceso Compact GuardLogix, un PLC de seguridad GuardLogix, red EtherNet/IP, bandas transportadoras, neumática, robots FANUC y visión Cognex en una secuencia de producción segura y validada para transportar, ensamblar e inspeccionar una pieza."
+   },
+   "tags": [
+    "PLC",
+    "Automation",
+    "Rockwell",
+    "Safety"
+   ],
+   "cover": "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161551.png",
+   "photos": [
+    "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161551.png",
+    "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161631.png",
+    "projects/rockwell-automated-manufacturing-cell/photos/team/Class.jpeg",
+    "projects/rockwell-automated-manufacturing-cell/photos/team/PLC-team.jpeg"
+   ],
+   "report": "projects/rockwell-automated-manufacturing-cell/final-report/Reporte Final (2).pdf",
+   "presentation": "projects/rockwell-automated-manufacturing-cell/presentation/PLC.pdf",
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/rockwell-automated-manufacturing-cell/code",
+   "video": null
+  },
+  {
+   "id": "project-02-robotic-arm",
+   "title": {
+    "de": "Roboterarm mit neuronalem Netz",
+    "en": "Robotic Arm with Neural Network",
+    "es": "Brazo robótico con red neuronal"
+   },
+   "year": "2026",
+   "summary": {
+    "de": "Roboterarm-Projekt mit einem in Python entwickelten neuronalen Netz. (Entwurf)",
+    "en": "Robotic arm project with a neural network developed in Python. (Draft)",
+    "es": "Proyecto de brazo robótico con una red neuronal desarrollada en Python. (Borrador)"
+   },
+   "long": {
+    "de": "Roboterarm-Projekt mit einem neuronalen Netz, umgesetzt in Python (Jupyter Notebook). Ausführliche Beschreibung folgt. (Entwurf)",
+    "en": "Robotic arm project with a neural network implemented in Python (Jupyter notebook). Full description coming soon. (Draft)",
+    "es": "Proyecto de brazo robótico con una red neuronal implementada en Python (Jupyter notebook). Descripción completa pendiente. (Borrador)"
+   },
+   "tags": [
+    "Robotics",
+    "AI",
+    "Python"
+   ],
+   "cover": "projects/project-02-robotic-arm/photos/robot.png",
+   "photos": [
+    "projects/project-02-robotic-arm/photos/AI-robot-Image.jpg",
+    "projects/project-02-robotic-arm/photos/robot.png"
+   ],
+   "report": "projects/project-02-robotic-arm/final-report/Evidencia.1. Reporte escrito integrador del reto robots.pdf",
+   "presentation": "projects/project-02-robotic-arm/presentation/M1 Actividad Reto Presentación Final ante SF y evaluación de competencias.pdf",
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/project-02-robotic-arm/code",
+   "video": null
+  },
+  {
+   "id": "autonomous-mobile-robot-stm32",
+   "title": {
+    "de": "Autonomer mobiler Roboter (STM32)",
+    "en": "Autonomous Mobile Robot (STM32)",
+    "es": "Robot móvil autónomo (STM32)"
+   },
+   "year": "2026",
+   "summary": {
+    "de": "Differentialantrieb-Roboter mit IMU-Sensorfusion, Odometrie und Fuzzy-Regelung.",
+    "en": "Differential-drive robot with IMU sensor fusion, odometry and fuzzy control.",
+    "es": "Robot diferencial con fusión de sensores IMU, odometría y control difuso."
+   },
+   "long": {
+    "de": "Roboter mit Differentialantrieb auf einem STM32 NUCLEO-F103RB. Ein MPU9250-IMU mit Madgwick-Fusion schätzt die Ausrichtung, Radencoder liefern die Odometrie und ein Fuzzy-Regler passt die Motor-PWM im geschlossenen Regelkreis an. Ein Ultraschallsensor erkennt Hindernisse; über Bluetooth (HC-05) fährt er quadratische Bahnen von 3×3, 5×5 und 7×7 m.",
+    "en": "Differential-drive robot on an STM32 NUCLEO-F103RB. An MPU9250 IMU with Madgwick fusion estimates heading, wheel encoders provide odometry and a fuzzy-logic controller adjusts the motor PWM in closed loop. An ultrasonic sensor detects obstacles, and via Bluetooth (HC-05) it runs square paths of 3×3, 5×5 and 7×7 m.",
+    "es": "Robot diferencial sobre un STM32 NUCLEO-F103RB. Una IMU MPU9250 con fusión Madgwick estima la orientación, los encoders dan la odometría y un controlador difuso ajusta el PWM de los motores en lazo cerrado. Un sensor ultrasónico detecta obstáculos y por Bluetooth (HC-05) ejecuta trayectorias cuadradas de 3×3, 5×5 y 7×7 m."
+   },
+   "tags": [
+    "STM32",
+    "FuzzyControl",
+    "IMU",
+    "Robotics"
+   ],
+   "cover": "projects/autonomous-mobile-robot-stm32/photos/car-front-view.jpeg",
+   "photos": [
+    "projects/autonomous-mobile-robot-stm32/photos/CAD.jpeg",
+    "projects/autonomous-mobile-robot-stm32/photos/car-front-view.jpeg",
+    "projects/autonomous-mobile-robot-stm32/photos/car-side-view.jpeg",
+    "projects/autonomous-mobile-robot-stm32/photos/telemetry-interphase.jpg"
+   ],
+   "report": "projects/autonomous-mobile-robot-stm32/final-report/Reporte final Automatizacion.pdf",
+   "presentation": "projects/autonomous-mobile-robot-stm32/presentation/AUTONOMOUS CAR.pdf",
+   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/autonomous-mobile-robot-stm32/code",
+   "video": null
+  },
+  {
+   "id": "thermal-energy-recovery-tractor-heating",
+   "title": {
+    "de": "Wärmerückgewinnung für Traktorkabine",
+    "en": "Thermal Recovery for Tractor Cab Heating",
+    "es": "Recuperación térmica para calefacción de tractor"
+   },
+   "year": "2026",
+   "summary": {
+    "de": "Zwei-Kammer-Wärmesystem mit analoger EIN/AUS-Regelung mit Hysterese auf Basis von Operationsverstärkern.",
+    "en": "Two-chamber thermal system with analog ON/OFF hysteresis control built with op-amps.",
+    "es": "Sistema térmico de dos cámaras con control analógico ON/OFF con histéresis hecho con amplificadores operacionales."
+   },
+   "long": {
+    "de": "Simuliert die Nutzung der Motorabwärme zur Beheizung einer Traktorkabine. Ein Heizwiderstand ersetzt den Motor, ein Lüfter überträgt die Wärme per Zwangskonvektion in eine zweite Kammer. Thermistor und LM35 werden mit Operationsverstärkern aufbereitet, zwei EIN/AUS-Regler mit Hysterese steuern Heizung und Belüftung. Validiert per Simulation und mit einem Prototyp.",
+    "en": "Simulates recovering engine heat to warm a tractor cabin. A resistive heater stands in for the engine and a fan moves heat by forced convection into a second chamber. A thermistor and an LM35 are conditioned with op-amps, and two ON/OFF controllers with hysteresis regulate the heater and the ventilation. Validated in simulation and with a physical prototype.",
+    "es": "Simula la recuperación del calor del motor para calentar la cabina de un tractor. Una resistencia hace de motor y un ventilador mueve el calor por convección forzada a una segunda cámara. Un termistor y un LM35 se acondicionan con amplificadores operacionales, y dos controles ON/OFF con histéresis regulan la resistencia y la ventilación. Validado en simulación y con un prototipo físico."
+   },
+   "tags": [
+    "Control",
+    "OpAmps",
+    "Thermal",
+    "Electronics"
+   ],
+   "cover": "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD1.png",
+   "photos": [
+    "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD1.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD2.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/Hystheresis Simulation.jpeg",
+    "projects/thermal-energy-recovery-tractor-heating/photos/Schematics.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/electronics/Electronics.png",
+    "projects/thermal-energy-recovery-tractor-heating/photos/electronics/OpAmps Configuration.png"
+   ],
+   "report": "projects/thermal-energy-recovery-tractor-heating/final-report/Evidencia. Ensayo del Reto Control de Temperatura de Tractor con OpAmps.pdf",
+   "presentation": "projects/thermal-energy-recovery-tractor-heating/presentation/Hysteresis Temperature Control Tractor.pdf",
+   "code": null,
+   "video": null
+  },
   {
    "id": "arduino-goalkeeper-robot",
    "title": {
+    "de": "Arduino-Torwart-Roboter",
     "en": "Arduino Goalkeeper Robot",
     "es": "Robot portero Arduino"
    },
    "year": "2026",
    "summary": {
-    "en": "Interactive goalkeeper controlled with a joystick: stepper-driven lateral motion and a solenoid kick, with 3D-printed parts.",
-    "es": "Portero interactivo controlado con joystick: movimiento lateral con motor a pasos y pateo con solenoide, con piezas impresas en 3D."
+    "de": "Interaktiver Torwart mit Joystick-Steuerung, Schrittmotor und Magnetspule, mit 3D-gedruckten Teilen.",
+    "en": "Interactive goalkeeper with joystick control, stepper motor and solenoid kick, with 3D-printed parts.",
+    "es": "Portero interactivo con joystick, motor a pasos y pateo con solenoide, con piezas impresas en 3D."
+   },
+   "long": {
+    "de": "Interaktiver Torwart auf Basis eines Arduino Uno. Ein Joystick bewegt ihn über Treiber A4988 und Schrittmotor mit linearer Übersetzung entlang des Tors, Endschalter übernehmen die Referenzfahrt und eine Treiberschaltung löst den Schuss der Magnetspule aus. Die mechanischen Teile wurden in CAD konstruiert und 3D-gedruckt.",
+    "en": "Interactive goalkeeper built around an Arduino Uno. A joystick moves it along the goal via an A4988 driver and a stepper motor with linear transmission, limit switches handle homing, and a solenoid driver circuit triggers the kick. The mechanical parts were designed in CAD and 3D printed.",
+    "es": "Portero interactivo construido con un Arduino Uno. Un joystick lo mueve a lo largo de la portería mediante un driver A4988 y un motor a pasos con transmisión lineal, los finales de carrera hacen el homing y un circuito driver activa el pateo del solenoide. Las piezas mecánicas se diseñaron en CAD y se imprimieron en 3D."
    },
    "tags": [
     "Arduino",
     "CAD",
-    "Electrónica",
-    "Mecatrónica"
+    "Electronics",
+    "Mechatronics"
    ],
    "cover": "projects/arduino-goalkeeper-robot/photos/cad-whole-structure.png",
    "photos": [
@@ -48,109 +263,27 @@
    "video": null
   },
   {
-   "id": "autonomous-mobile-robot-stm32",
-   "title": {
-    "en": "Autonomous Mobile Robot (STM32)",
-    "es": "Robot móvil autónomo (STM32)"
-   },
-   "year": "2026",
-   "summary": {
-    "en": "Differential-drive robot with IMU sensor fusion (Madgwick), encoder odometry and a fuzzy-logic controller; runs square paths via Bluetooth.",
-    "es": "Robot diferencial con fusión de sensores IMU (Madgwick), odometría con encoders y control difuso; ejecuta trayectorias cuadradas por Bluetooth."
-   },
-   "tags": [
-    "STM32",
-    "Control difuso",
-    "IMU",
-    "Robótica"
-   ],
-   "cover": "projects/autonomous-mobile-robot-stm32/photos/car-front-view.jpeg",
-   "photos": [
-    "projects/autonomous-mobile-robot-stm32/photos/CAD.jpeg",
-    "projects/autonomous-mobile-robot-stm32/photos/car-front-view.jpeg",
-    "projects/autonomous-mobile-robot-stm32/photos/car-side-view.jpeg",
-    "projects/autonomous-mobile-robot-stm32/photos/telemetry-interphase.jpg"
-   ],
-   "report": "projects/autonomous-mobile-robot-stm32/final-report/Reporte final Automatizacion.pdf",
-   "presentation": "projects/autonomous-mobile-robot-stm32/presentation/AUTONOMOUS CAR.pdf",
-   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/autonomous-mobile-robot-stm32/code",
-   "video": null
-  },
-  {
-   "id": "thermal-energy-recovery-tractor-heating",
-   "title": {
-    "en": "Thermal Recovery for Tractor Cab Heating",
-    "es": "Recuperación térmica para calefacción de tractor"
-   },
-   "year": "2026",
-   "summary": {
-    "en": "Two-chamber thermal system with analog ON/OFF hysteresis control built with op-amps, thermistor and LM35 sensors.",
-    "es": "Sistema térmico de dos cámaras con control analógico ON/OFF con histéresis hecho con amplificadores operacionales, termistor y sensor LM35."
-   },
-   "tags": [
-    "Control",
-    "Op-Amps",
-    "Térmico",
-    "Electrónica"
-   ],
-   "cover": "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD1.png",
-   "photos": [
-    "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD1.png",
-    "projects/thermal-energy-recovery-tractor-heating/photos/CAD/CAD2.png",
-    "projects/thermal-energy-recovery-tractor-heating/photos/Hystheresis Simulation.jpeg",
-    "projects/thermal-energy-recovery-tractor-heating/photos/Schematics.png",
-    "projects/thermal-energy-recovery-tractor-heating/photos/electronics/Electronics.png",
-    "projects/thermal-energy-recovery-tractor-heating/photos/electronics/OpAmps Configuration.png"
-   ],
-   "report": "projects/thermal-energy-recovery-tractor-heating/final-report/Evidencia. Ensayo del Reto Control de Temperatura de Tractor con OpAmps.pdf",
-   "presentation": "projects/thermal-energy-recovery-tractor-heating/presentation/Hysteresis Temperature Control Tractor.pdf",
-   "code": null,
-   "video": null
-  },
-  {
-   "id": "rockwell-automated-manufacturing-cell",
-   "title": {
-    "en": "Automated Manufacturing Cell – Rockwell",
-    "es": "Celda de manufactura automatizada – Rockwell"
-   },
-   "year": "2026",
-   "summary": {
-    "en": "Multi-team automation of a manufacturing cell with GuardLogix PLCs, safety PLC, EtherNet/IP, FANUC robots and Cognex vision.",
-    "es": "Automatización multiequipo de una celda de manufactura con PLCs GuardLogix, PLC de seguridad, EtherNet/IP, robots FANUC y visión Cognex."
-   },
-   "tags": [
-    "PLC",
-    "Automatización",
-    "Rockwell",
-    "Seguridad"
-   ],
-   "cover": "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161551.png",
-   "photos": [
-    "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161551.png",
-    "projects/rockwell-automated-manufacturing-cell/photos/manufacturing-cell/Screenshot 2026-10-08 161631.png",
-    "projects/rockwell-automated-manufacturing-cell/photos/team/Class.jpeg",
-    "projects/rockwell-automated-manufacturing-cell/photos/team/PLC-team.jpeg"
-   ],
-   "report": "projects/rockwell-automated-manufacturing-cell/final-report/Reporte Final (2).pdf",
-   "presentation": "projects/rockwell-automated-manufacturing-cell/presentation/PLC.pdf",
-   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/rockwell-automated-manufacturing-cell/code",
-   "video": null
-  },
-  {
    "id": "project-01-inverted-pendulum",
    "title": {
+    "de": "Inverses Pendel",
     "en": "Inverted Pendulum",
     "es": "Péndulo invertido"
    },
    "year": "2026",
    "summary": {
-    "en": "Control of an inverted pendulum using state-space methods in MATLAB. (Draft text – to review)",
-    "es": "Control de un péndulo invertido con métodos de espacio de estados en MATLAB. (Texto borrador – por revisar)"
+    "de": "Regelung eines inversen Pendels mit Zustandsraummethoden in MATLAB. (Entwurf)",
+    "en": "Control of an inverted pendulum using state-space methods in MATLAB. (Draft)",
+    "es": "Control de un péndulo invertido con métodos de espacio de estados en MATLAB. (Borrador)"
+   },
+   "long": {
+    "de": "Regelung eines inversen Pendels mit Zustandsraummethoden in MATLAB. Ausführliche Beschreibung folgt. (Entwurf)",
+    "en": "Control of an inverted pendulum using state-space methods in MATLAB. Full description coming soon. (Draft)",
+    "es": "Control de un péndulo invertido con métodos de espacio de estados en MATLAB. Descripción completa pendiente. (Borrador)"
    },
    "tags": [
     "Control",
     "MATLAB",
-    "Espacio de estados"
+    "StateSpace"
    ],
    "cover": "projects/project-01-inverted-pendulum/photos/InvertedPendulum.jpeg",
    "photos": [
@@ -159,32 +292,6 @@
    "report": "projects/project-01-inverted-pendulum/final-report/Inverted Pendulum Final Report.pdf",
    "presentation": null,
    "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/project-01-inverted-pendulum/code",
-   "video": null
-  },
-  {
-   "id": "project-02-robotic-arm",
-   "title": {
-    "en": "Robotic Arm with Neural Network",
-    "es": "Brazo robótico con red neuronal"
-   },
-   "year": "2026",
-   "summary": {
-    "en": "Robotic arm project with a neural network developed in Python. (Draft text – to review)",
-    "es": "Proyecto de brazo robótico con una red neuronal desarrollada en Python. (Texto borrador – por revisar)"
-   },
-   "tags": [
-    "Robótica",
-    "IA",
-    "Python"
-   ],
-   "cover": "projects/project-02-robotic-arm/photos/robot.png",
-   "photos": [
-    "projects/project-02-robotic-arm/photos/AI-robot-Image.jpg",
-    "projects/project-02-robotic-arm/photos/robot.png"
-   ],
-   "report": "projects/project-02-robotic-arm/final-report/Evidencia.1. Reporte escrito integrador del reto robots.pdf",
-   "presentation": "projects/project-02-robotic-arm/presentation/M1 Actividad Reto Presentación Final ante SF y evaluación de competencias.pdf",
-   "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/project-02-robotic-arm/code",
    "video": null
   }
  ]
