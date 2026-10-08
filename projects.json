@@ -78,7 +78,7 @@
    "es": "PLC"
   }
  },
- "certificates": [  {
+ "certifications": [  {
     "type": "certificate",
     "title": {"de": "Goethe-Zertifikat B2", "en": "Goethe Certificate B2", "es": "Certificado Goethe B2"},
     "issuer": "Goethe-Institut",
