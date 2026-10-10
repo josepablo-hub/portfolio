@@ -350,7 +350,11 @@
   {
    "company": "Nemak",
    "photo": "assets/nemak.jpg",
-   "period": "",
+   "period": {
+    "de": "März – August 2026",
+    "en": "March - August 2026",
+    "es": "marzo - agosto 2026"
+   },
    "role": {
     "de": "R&D Engineering Intern",
     "en": "R&D Engineering Intern",
@@ -382,9 +386,9 @@
      "stat": {
       "value": "−83 %",
       "label": {
-       "de": "Zeit pro Vorschlag (2 Std. → 20 Min.)",
-       "en": "time per proposal (2 h → 20 min)",
-       "es": "de tiempo por propuesta (2 h → 20 min)"
+       "de": "Erfassungszeit pro Projektvorschlag (2 Std. → 20 Min.)",
+       "en": "project proposal registration time (2 h → 20 min)",
+       "es": "tiempo de registro por propuesta (2 h → 20 min)"
       }
      }
     },
