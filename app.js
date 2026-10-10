@@ -1,9 +1,9 @@
 const $ = s => document.querySelector(s);
 const u = p => encodeURI(p);
 const TXT = {
-  de: { projects: 'Projekte', certs: 'Zertifikate & Empfehlungsschreiben', navc: 'Zertifikate', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', letter: 'Empfehlungsschreiben' },
-  en: { projects: 'Projects', certs: 'Certifications & Recommendation Letters', navc: 'Certifications', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', letter: 'Recommendation letter' },
-  es: { projects: 'Proyectos', certs: 'Certificaciones y cartas de recomendación', navc: 'Certificaciones', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', letter: 'Carta de recomendación' }
+  de: { exp: 'Berufserfahrung', projects: 'Projekte', certs: 'Zertifikate & Empfehlungsschreiben', navc: 'Zertifikate', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', letter: 'Empfehlungsschreiben' },
+  en: { exp: 'Work Experience', projects: 'Projects', certs: 'Certifications & Recommendation Letters', navc: 'Certifications', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', letter: 'Recommendation letter' },
+  es: { exp: 'Experiencia laboral', projects: 'Proyectos', certs: 'Certificaciones y cartas de recomendación', navc: 'Certificaciones', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', letter: 'Carta de recomendación' }
 };
 let DATA, lang = localStorage.getItem('lang') || 'de', tag = null, q = '', scrollTo = null;
 const t = k => TXT[lang][k];
@@ -31,7 +31,7 @@ async function init() {
 function render() {
   document.documentElement.lang = lang;
   document.querySelectorAll('.langs button').forEach(b => b.classList.toggle('on', b.dataset.l === lang));
-  $('#n1').textContent = t('projects'); $('#n2').textContent = t('navc');
+  $('#n0').textContent = t('exp'); $('#n1').textContent = t('projects'); $('#n2').textContent = t('navc');
   const m = location.hash.match(/^#\/p\/(.+)$/);
   const p = m && DATA.projects.find(x => x.id === decodeURIComponent(m[1]));
   p ? detail(p) : home();
@@ -54,6 +54,7 @@ function home() {
       <a class="btn" href="${P.github}" target="_blank">GitHub</a>
     </div>
   </section>
+  ${experience()}
   <h2 id="projects">${t('projects')}</h2>
   <div class="tools">
     <input id="q" placeholder="${t('search')}" value="${q}">
@@ -66,6 +67,28 @@ function home() {
   $('#q').oninput = e => { q = e.target.value; cards(); };
   document.querySelectorAll('.chip').forEach(c => c.onclick = () => { tag = c.dataset.t || null; home(); });
   cards();
+}
+
+function experience() {
+  return (DATA.experience || []).map(x => `
+  <h2 id="exp">${t('exp')}</h2>
+  <section class="xp">
+    <div class="xp-side">
+      <img src="${u(x.photo)}" alt="${x.company}" onerror="this.parentNode.classList.add('nophoto');this.remove()">
+      <div class="xp-brand">${x.company}</div>
+      <span class="chip">${x.sector[lang]}</span>
+    </div>
+    <div class="xp-main">
+      <h3>${x.role[lang]} <span>@ ${x.company}</span>${x.period ? `<small>${x.period}</small>` : ''}</h3>
+      <p class="xp-intro">${x.intro[lang]}</p>
+      ${x.items.map(i => `<div class="xp-item">
+        <div class="xp-t"><h4>${i.title[lang]}</h4><span class="tag">${i.tech}</span></div>
+        <p>${i.text[lang]}</p>
+        ${i.stat ? `<div class="stat"><b>${i.stat.value}</b><span>${i.stat.label[lang]}</span></div>` : ''}
+      </div>`).join('')}
+      <p class="xp-outro">${x.outro[lang]}</p>
+    </div>
+  </section>`).join('');
 }
 
 function certs() {
