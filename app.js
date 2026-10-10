@@ -79,7 +79,7 @@ function experience() {
       <span class="chip">${x.sector[lang]}</span>
     </div>
     <div class="xp-main">
-      <h3>${x.role[lang]} <span>@ ${x.company}</span>${x.period ? `<small>${x.period}</small>` : ''}</h3>
+      <h3>${x.role[lang]} <span>@ ${x.company}</span>${x.period ? `<small>${x.period[lang] || x.period}</small>` : ''}</h3>
       <p class="xp-intro">${x.intro[lang]}</p>
       ${x.items.map(i => `<div class="xp-item">
         <div class="xp-t"><h4>${i.title[lang]}</h4><span class="tag">${i.tech}</span></div>
