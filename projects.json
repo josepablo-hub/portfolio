@@ -76,28 +76,57 @@
    "de": "SPS",
    "en": "PLC",
    "es": "PLC"
+  },
+  "ComputerVision": {
+   "de": "Computer Vision",
+   "en": "Computer vision",
+   "es": "Visión por computadora"
+  },
+  "Simulation": {
+   "de": "Simulation",
+   "en": "Simulation",
+   "es": "Simulación"
+  },
+  "Simulink": {
+   "de": "Simulink",
+   "en": "Simulink",
+   "es": "Simulink"
   }
  },
- "certifications": [  {
-    "type": "certificate",
-    "title": {"de": "Goethe-Zertifikat B2", "en": "Goethe Certificate B2", "es": "Certificado Goethe B2"},
-    "issuer": "Goethe-Institut",
-    "date": "2026",
-    "file": "assets/certificates/GOETHE-ZERTIFIKAT B2.pdf"
+ "certifications": [
+  {
+   "type": "certificate",
+   "title": {
+    "de": "Goethe-Zertifikat B2",
+    "en": "Goethe Certificate B2",
+    "es": "Certificado Goethe B2"
+   },
+   "issuer": "Goethe-Institut",
+   "date": "2026",
+   "file": "assets/certificates/GOETHE-ZERTIFIKAT B2.pdf"
   },
   {
-    "type": "certificate",
-    "title": {"de": "TOEFL ITP-Ergebnisbericht", "en": "TOEFL ITP Score Report", "es": "Informe de resultados del TOEFL ITP"},
-    "issuer": "TOEFL ITP",
-    "date": "2025",
-    "file": "assets/certificates/TOEFL ITP Score Report.pdf"
+   "type": "certificate",
+   "title": {
+    "de": "TOEFL ITP-Ergebnisbericht",
+    "en": "TOEFL ITP Score Report",
+    "es": "Informe de resultados del TOEFL ITP"
+   },
+   "issuer": "TOEFL ITP",
+   "date": "2025",
+   "file": "assets/certificates/TOEFL ITP Score Report.pdf"
   },
   {
-    "type": "letter",
-    "title": {"de": "Empfehlungsschreiben", "en": "Recommendation letter", "es": "Carta de recomendación"},
-    "issuer": "Nemak R&D Director Dr. José Talamantes Silva",
-    "file": "assets/certificates/letter_of_recommendation_jose_pablo (JTSilva).pdf"
-  }],
+   "type": "letter",
+   "title": {
+    "de": "Empfehlungsschreiben",
+    "en": "Recommendation letter",
+    "es": "Carta de recomendación"
+   },
+   "issuer": "Nemak R&D Director Dr. José Talamantes Silva",
+   "file": "assets/certificates/letter_of_recommendation_jose_pablo (JTSilva).pdf"
+  }
+ ],
  "projects": [
   {
    "id": "rockwell-automated-manufacturing-cell",
@@ -138,25 +167,27 @@
   {
    "id": "project-02-robotic-arm",
    "title": {
-    "de": "Roboterarm mit neuronalem Netz",
-    "en": "Robotic Arm with Neural Network",
-    "es": "Brazo robótico con red neuronal"
+    "de": "Assistiver Fütterungsroboter (3 DOF)",
+    "en": "Assistive Feeding Robot (3-DOF)",
+    "es": "Robot asistente de alimentación (3 GDL)"
    },
    "year": "2026",
    "summary": {
-    "de": "Roboterarm-Projekt mit einem in Python entwickelten neuronalen Netz. (Entwurf)",
-    "en": "Robotic arm project with a neural network developed in Python. (Draft)",
-    "es": "Proyecto de brazo robótico con una red neuronal desarrollada en Python. (Borrador)"
+    "de": "3-DOF-RRR-Manipulator, der Menschen mit eingeschränkter Armmobilität beim Essen unterstützt: Kinematik, Dynamik, PD-Regelung, Computer Vision und RoboDK-Simulation.",
+    "en": "3-DOF RRR manipulator that helps people with upper-limb limitations to eat: kinematics, dynamics, PD control, computer vision and RoboDK simulation.",
+    "es": "Manipulador RRR de 3 GDL que ayuda a personas con limitaciones en las extremidades superiores a comer: cinemática, dinámica, control PD, visión por computadora y simulación en RoboDK."
    },
    "long": {
-    "de": "Roboterarm-Projekt mit einem neuronalen Netz, umgesetzt in Python (Jupyter Notebook). Ausführliche Beschreibung folgt. (Entwurf)",
-    "en": "Robotic arm project with a neural network implemented in Python (Jupyter notebook). Full description coming soon. (Draft)",
-    "es": "Proyecto de brazo robótico con una red neuronal implementada en Python (Jupyter notebook). Descripción completa pendiente. (Borrador)"
+    "de": "Ingenieurprojekt am Tecnológico de Monterrey: Entwurf und Simulation eines 3-DOF-RRR-Manipulators, der Menschen mit eingeschränkter Mobilität der oberen Extremitäten beim Essen hilft, indem er Speisen vom Teller zum Mund bringt. Das Modell umfasst Vorwärts- und Rückwärtskinematik nach Denavit–Hartenberg (Ellbogen oben und unten), eine Arbeitsraumanalyse mit rund 906 mm maximaler Reichweite sowie die Dynamik nach Euler–Lagrange.\n\nEin PD-Regler mit Gravitationskompensation (Kp 30/20, Kd 5/3) steuert die ersten beiden Gelenke, eine Computer-Vision-Komponente klassifiziert den Reifegrad von Papayas, und die Bewegung zwischen Ruhe-, Teller- und Mundposition wird in RoboDK simuliert. Sicherheitsnormen wie ISO 13482 und ISO 10218 wurden betrachtet. Es handelt sich um eine Modellierungs- und Simulationsstudie, nicht um einen validierten physischen Roboter.",
+    "en": "Engineering project at Tecnológico de Monterrey: design and simulation of a 3-DOF RRR robotic manipulator that helps people with upper-limb mobility limitations to eat by carrying food from a plate to the user's mouth. The model covers Denavit–Hartenberg forward and inverse kinematics (elbow-up and elbow-down), a workspace analysis with a maximum reach of about 906 mm, and Euler–Lagrange dynamics.\n\nA PD controller with gravity compensation (Kp 30/20, Kd 5/3) drives the first two joints, a computer-vision component classifies papaya maturity, and the movement between rest, plate and mouth positions is simulated in RoboDK. Safety standards such as ISO 13482 and ISO 10218 were reviewed. The work is a modeling and simulation study, not a validated physical robot.",
+    "es": "Proyecto de ingeniería del Tecnológico de Monterrey: diseño y simulación de un manipulador robótico RRR de 3 GDL que ayuda a personas con movilidad limitada en las extremidades superiores a comer, llevando la comida del plato a la boca. El modelo incluye cinemática directa e inversa con Denavit–Hartenberg (codo arriba y codo abajo), análisis del espacio de trabajo con un alcance máximo de unos 906 mm y dinámica con Euler–Lagrange.\n\nUn controlador PD con compensación de gravedad (Kp 30/20, Kd 5/3) controla las dos primeras articulaciones, un componente de visión por computadora clasifica la madurez de papayas y el movimiento entre las posiciones de reposo, plato y boca se simula en RoboDK. Se revisaron normas de seguridad como ISO 13482 e ISO 10218. Es un estudio de modelado y simulación, no un robot físico validado."
    },
    "tags": [
     "Robotics",
-    "AI",
-    "Python"
+    "Control",
+    "MATLAB",
+    "ComputerVision",
+    "Simulation"
    ],
    "cover": "projects/project-02-robotic-arm/photos/robot.png",
    "photos": [
@@ -284,25 +315,26 @@
   {
    "id": "project-01-inverted-pendulum",
    "title": {
-    "de": "Inverses Pendel",
-    "en": "Inverted Pendulum",
-    "es": "Péndulo invertido"
+    "de": "Rotatorisches inverses Pendel",
+    "en": "Rotary Inverted Pendulum",
+    "es": "Péndulo invertido rotatorio"
    },
    "year": "2026",
    "summary": {
-    "de": "Regelung eines inversen Pendels mit Zustandsraummethoden in MATLAB. (Entwurf)",
-    "en": "Control of an inverted pendulum using state-space methods in MATLAB. (Draft)",
-    "es": "Control de un péndulo invertido con métodos de espacio de estados en MATLAB. (Borrador)"
+    "de": "Stabilisierung eines rotatorischen inversen Pendels mit Zustandsrückführung und Polvorgabe, validiert auf einem Quanser QUBE Servo 3.",
+    "en": "Stabilization of a rotary inverted pendulum with state feedback and pole placement, validated on a Quanser QUBE Servo 3.",
+    "es": "Estabilización de un péndulo invertido rotatorio con retroalimentación de estados y asignación de polos, validada en un Quanser QUBE Servo 3."
    },
    "long": {
-    "de": "Regelung eines inversen Pendels mit Zustandsraummethoden in MATLAB. Ausführliche Beschreibung folgt. (Entwurf)",
-    "en": "Control of an inverted pendulum using state-space methods in MATLAB. Full description coming soon. (Draft)",
-    "es": "Control de un péndulo invertido con métodos de espacio de estados en MATLAB. Descripción completa pendiente. (Borrador)"
+    "de": "Regelungsprojekt am Tecnológico de Monterrey zur Stabilisierung eines rotatorischen inversen Pendels, eines von Natur aus instabilen Systems. Das System wurde nach Euler–Lagrange modelliert, in ein Zustandsraummodell mit vier Zuständen linearisiert und als vollständig steuerbar nachgewiesen (Rang der Steuerbarkeitsmatrix: 4).\n\nEine Zustandsrückführung (u = −Kx) wurde per Polvorgabe für 6,81 % maximale Überschwingung und 1,54 s Einschwingzeit ausgelegt; die Verstärkungen wurden mit der Transformationsmatrix- und der Regelungsnormalform-Methode berechnet. Umgesetzt in MATLAB, Simulink und QUARC auf einem Quanser QUBE Servo 3 stabilisierte der Regler das Pendel mit geringem stationärem Fehler; die entworfenen Verstärkungen lieferten eine schnellere Reaktion, bei höherem Motorspannungsaufwand.",
+    "en": "Control project at Tecnológico de Monterrey to stabilize a rotary inverted pendulum, an inherently unstable system. The system was modeled with the Euler–Lagrange formulation, linearized into a four-state state-space model and verified as fully controllable (controllability matrix rank 4).\n\nA state feedback controller (u = −Kx) was designed by pole placement for 6.81% maximum overshoot and 1.54 s settling time, calculating the gains with the transformation matrix and companion form methods. Implemented in MATLAB, Simulink and QUARC on a Quanser QUBE Servo 3, it stabilized the pendulum with low steady-state error; the designed gains gave a faster response at the cost of higher motor voltage effort.",
+    "es": "Proyecto de control del Tecnológico de Monterrey para estabilizar un péndulo invertido rotatorio, un sistema inestable por naturaleza. Se modeló con Euler–Lagrange, se linealizó en un modelo de espacio de estados de cuatro estados y se comprobó que es totalmente controlable (rango de la matriz de controlabilidad: 4).\n\nSe diseñó un controlador de retroalimentación de estados (u = −Kx) por asignación de polos para un sobreimpulso máximo de 6.81 % y un tiempo de asentamiento de 1.54 s, calculando las ganancias con los métodos de matriz de transformación y forma canónica. Implementado en MATLAB, Simulink y QUARC sobre un Quanser QUBE Servo 3, estabilizó el péndulo con bajo error en estado estable; las ganancias diseñadas dieron una respuesta más rápida a costa de mayor esfuerzo de voltaje del motor."
    },
    "tags": [
     "Control",
     "MATLAB",
-    "StateSpace"
+    "StateSpace",
+    "Simulink"
    ],
    "cover": "projects/project-01-inverted-pendulum/photos/InvertedPendulum.jpeg",
    "photos": [
@@ -312,6 +344,82 @@
    "presentation": null,
    "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/project-01-inverted-pendulum/code",
    "video": "h135pAwO4UE"
+  }
+ ],
+ "experience": [
+  {
+   "company": "Nemak",
+   "photo": "assets/nemak.jpg",
+   "period": "",
+   "role": {
+    "de": "R&D Engineering Intern",
+    "en": "R&D Engineering Intern",
+    "es": "R&D Engineering Intern"
+   },
+   "sector": {
+    "de": "Automobil-F&E",
+    "en": "Automotive R&D",
+    "es": "I+D automotriz"
+   },
+   "intro": {
+    "de": "Während meines Praktikums in der Forschungs- und Entwicklungsabteilung von Nemak habe ich digitale Lösungen entwickelt, die Engineering-Workflows automatisieren, interne Prozesse optimieren und den Datenzugang in der Abteilung verbessern.",
+    "en": "During my internship in Nemak's Research & Development department, I developed digital solutions to automate engineering workflows, optimize internal processes and improve data access across the department.",
+    "es": "Durante mis prácticas en el departamento de Investigación y Desarrollo de Nemak desarrollé soluciones digitales para automatizar flujos de trabajo de ingeniería, optimizar procesos internos y mejorar el acceso a los datos del departamento."
+   },
+   "items": [
+    {
+     "title": {
+      "de": "Automatisierung von Projektvorschlägen",
+      "en": "Project Proposal Automation",
+      "es": "Automatización de propuestas de proyecto"
+     },
+     "tech": "Power Apps · Power Automate · SharePoint",
+     "text": {
+      "de": "Ich habe einen durchgängigen Workflow entworfen und umgesetzt, der die Erstellung von Projektvorschlägen von einem manuellen in einen digitalen Prozess überführt: Eine mehrstufige Power-Apps-Anwendung erfasst die Projektdaten, SharePoint-Listen speichern sie, und Power-Automate-Flows übernehmen Genehmigungen, Berechnungen sowie die automatische Erstellung standardisierter PowerPoint-Präsentationen und Projekt-One-Pager. Durch die Bündelung von Dateneingabe, Genehmigung und Dokumentenerstellung in einer Anwendung sank der administrative Aufwand für Ingenieure und Projektleiter deutlich.",
+      "en": "I designed and implemented an end-to-end workflow that turned project proposal creation from a manual process into a digital one: a multi-step Power Apps application captures the project data, SharePoint lists store it, and Power Automate flows handle approvals, business calculations and the automatic generation of standardized PowerPoint presentations and project one-pagers. By consolidating data entry, approvals and document generation in a single application, the administrative workload for engineers and project leaders dropped significantly.",
+      "es": "Diseñé e implementé un flujo de trabajo de principio a fin que convirtió la creación de propuestas de proyecto de un proceso manual en uno digital: una aplicación de Power Apps de varios pasos captura los datos del proyecto, listas de SharePoint los almacenan y flujos de Power Automate gestionan las aprobaciones, los cálculos de negocio y la generación automática de presentaciones de PowerPoint y one-pagers estandarizados. Al unificar captura de datos, aprobaciones y generación de documentos en una sola aplicación, la carga administrativa de ingenieros y líderes de proyecto bajó de forma significativa."
+     },
+     "stat": {
+      "value": "−83 %",
+      "label": {
+       "de": "Zeit pro Vorschlag (2 Std. → 20 Min.)",
+       "en": "time per proposal (2 h → 20 min)",
+       "es": "de tiempo por propuesta (2 h → 20 min)"
+      }
+     }
+    },
+    {
+     "title": {
+      "de": "R&D Knowledge Center",
+      "en": "R&D Knowledge Center",
+      "es": "R&D Knowledge Center"
+     },
+     "tech": "Azure Logic Apps",
+     "text": {
+      "de": "Ich habe automatisierte Workflows mit Azure Logic Apps für das R&D Knowledge Center von Nemak entwickelt, ein zentrales Repository für Engineering-Berichte, Projektdokumentation und technische Informationen. Sie verbessern, wie Wissen organisiert und gefunden wird, sodass Ingenieure vorhandene Informationen schneller wiederverwenden und wiederholte Suchen sowie doppelte Arbeit vermeiden.",
+      "en": "I built automated workflows with Azure Logic Apps for Nemak's R&D Knowledge Center, a central repository of engineering reports, project documentation and technical information. They improve how knowledge is organized and accessed, helping engineers find and reuse existing information and cutting repetitive searches and duplicated work across projects.",
+      "es": "Construí flujos de trabajo automatizados con Azure Logic Apps para el R&D Knowledge Center de Nemak, un repositorio central de reportes de ingeniería, documentación de proyectos e información técnica. Mejoran cómo se organiza y se accede al conocimiento, ayudando a los ingenieros a encontrar y reutilizar información existente y reduciendo búsquedas repetitivas y trabajo duplicado entre proyectos."
+     }
+    },
+    {
+     "title": {
+      "de": "Datenanalyse & Reporting",
+      "en": "Data Analytics & Reporting",
+      "es": "Análisis de datos y reportes"
+     },
+     "tech": "Power BI",
+     "text": {
+      "de": "Ich habe Power-BI-Dashboards entwickelt, die Abteilungsdaten in verwertbare Erkenntnisse verwandeln, die Transparenz verbessern und datenbasierte Entscheidungen in Engineering-Workflows unterstützen.",
+      "en": "I developed Power BI dashboards that turn departmental data into actionable insights, improve information visibility and support data-driven decisions in engineering workflows.",
+      "es": "Desarrollé dashboards en Power BI que convierten los datos del departamento en información accionable, mejoran la visibilidad de la información y apoyan la toma de decisiones basada en datos en los flujos de ingeniería."
+     }
+    }
+   ],
+   "outro": {
+    "de": "Dabei habe ich praktische Erfahrung in Low-Code-Entwicklung, Workflow-Automatisierung, Datenvisualisierung und Prozessoptimierung im automobilen F&E-Umfeld gesammelt.",
+    "en": "These projects gave me hands-on experience in low-code development, workflow automation, data visualization and process optimization in an automotive R&D environment.",
+    "es": "Estos proyectos me dieron experiencia práctica en desarrollo low-code, automatización de flujos de trabajo, visualización de datos y optimización de procesos en un entorno de I+D automotriz."
+   }
   }
  ]
 }
