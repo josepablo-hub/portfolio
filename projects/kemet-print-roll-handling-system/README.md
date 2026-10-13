@@ -82,25 +82,6 @@ A video demonstrating the operation of the ESP32-CAM-based vision system is avai
 
 The project demonstrated how CAD modeling, structural simulation, and physical prototyping can be combined to develop and improve an industrial equipment concept.
 
-## Project Gallery
-
-### Mechanical Design
-
-<!-- Add selected SolidWorks renders and assembly screenshots here. -->
-
-### Structural Simulation
-
-<!-- Add screenshots of the FEA setup, stress distribution, and displacement results here. -->
-
-### Physical Prototype
-
-<!-- Add photographs of the manufactured prototype here. -->
-
-## Project Documentation
-
-* [Final Report](final-report/KEMET-Project-Final-Report.pdf)
-* [Project Presentation](presentation/KEMET-Project-Presentation.pdf)
-* [CAD Files](cad/)
 
 ## Project Information
 
