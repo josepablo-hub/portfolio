@@ -1,13 +1,15 @@
 const $ = s => document.querySelector(s);
 const u = p => encodeURI(p);
 const TXT = {
-  de: { exp: 'Berufserfahrung', projects: 'Projekte', certs: 'Zertifikate & Empfehlungsschreiben', navc: 'Zertifikate', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', letter: 'Empfehlungsschreiben' },
-  en: { exp: 'Work Experience', projects: 'Projects', certs: 'Certifications & Recommendation Letters', navc: 'Certifications', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', letter: 'Recommendation letter' },
-  es: { exp: 'Experiencia laboral', projects: 'Proyectos', certs: 'Certificaciones y cartas de recomendación', navc: 'Certificaciones', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', letter: 'Carta de recomendación' }
+  de: { exp: 'Berufserfahrung', projects: 'Projekte', certs: 'Zertifikate, Auszeichnungen & Empfehlungsschreiben', navc: 'Zertifikate & Awards', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', award: 'Auszeichnung', letter: 'Empfehlungsschreiben' },
+  en: { exp: 'Work Experience', projects: 'Projects', certs: 'Certifications, Awards & Recommendation Letters', navc: 'Certifications & Awards', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', award: 'Award', letter: 'Recommendation letter' },
+  es: { exp: 'Experiencia laboral', projects: 'Proyectos', certs: 'Certificaciones, reconocimientos y cartas de recomendación', navc: 'Certificaciones y reconocimientos', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', award: 'Reconocimiento', letter: 'Carta de recomendación' }
 };
 let DATA, lang = localStorage.getItem('lang') || 'de', tag = null, q = '', scrollTo = null;
 const t = k => TXT[lang][k];
 const tn = k => (DATA.tagNames[k] || {})[lang] || k;
+// CV por idioma: DE -> versión en alemán; EN y ES -> versión en inglés
+const cvFile = P => (typeof P.cv === 'string') ? P.cv : (P.cv[lang] || P.cv.en);
 const tg = g => `<span class="tag">#${tn(g)}</span>`;
 
 async function init() {
@@ -49,7 +51,7 @@ function home() {
       <p style="margin:0;color:var(--ac)">${t('hi')}</p>
       <h1><em>${P.name}</em></h1>
       <p><strong>${P.role[lang]}</strong><br>${P.bio[lang]}</p>
-      <a class="btn p" href="${u(P.cv)}" target="_blank">${t('cv')}</a>
+      <a class="btn p" href="${u(cvFile(P))}" target="_blank">${t('cv')}</a>
       <a class="btn" href="${P.linkedin}" target="_blank">LinkedIn</a>
       <a class="btn" href="${P.github}" target="_blank">GitHub</a>
     </div>
@@ -94,9 +96,13 @@ function experience() {
 function certs() {
   const C = DATA.certifications || [];
   if (!C.length) return `<div class="cert empty">${t('empty')}</div>`;
-  return C.map(c => `<div class="cert"><span class="k">${t(c.type === 'letter' ? 'letter' : 'cert')}</span>
+  return C.map(c => {
+    const kind = c.type === 'letter' ? 'letter' : c.type === 'award' ? 'award' : 'cert';
+    return `<div class="cert"><span class="k">${t(kind)}</span>
     <strong>${c.title[lang]}</strong><small>${c.issuer || ''}${c.date ? ' · ' + c.date : ''}</small>
-    ${c.file ? `<a class="btn" style="margin-top:8px;text-align:center" href="${u(c.file)}" target="_blank">${t('open')}</a>` : ''}</div>`).join('');
+    ${c.note ? `<small style="display:block;margin-top:6px">${c.note[lang]}</small>` : ''}
+    ${c.file ? `<a class="btn" style="margin-top:8px;text-align:center" href="${u(c.file)}" target="_blank">${t('open')}</a>` : ''}</div>`;
+  }).join('');
 }
 
 function cards() {
