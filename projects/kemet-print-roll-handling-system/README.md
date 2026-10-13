@@ -64,7 +64,7 @@ Although the source code is not included in this repository, a demonstration vid
 
 ### System Demonstration
 
-A video demonstrating the operation of the ESP32-CAM-based vision system is available in the [`videos/`](videos/) directory.
+A video demonstrating the operation of the ESP32-CAM-based vision system is available in https://josepablo-hub.github.io/portfolio/#/
 
 ### Key Results
 
