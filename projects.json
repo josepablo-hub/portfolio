@@ -98,39 +98,75 @@
   }
  },
  "certifications": [
-  {
-   "type": "certificate",
-   "title": {
-    "de": "Goethe-Zertifikat B2",
-    "en": "Goethe Certificate B2",
-    "es": "Certificado Goethe B2"
-   },
-   "issuer": "Goethe-Institut",
-   "date": "2026",
-   "file": "assets/certificates/GOETHE-ZERTIFIKAT B2.pdf"
-  },
-  {
-   "type": "certificate",
-   "title": {
-    "de": "TOEFL ITP-Ergebnisbericht",
-    "en": "TOEFL ITP Score Report",
-    "es": "Informe de resultados del TOEFL ITP"
-   },
-   "issuer": "TOEFL ITP",
-   "date": "2025",
-   "file": "assets/certificates/TOEFL ITP Score Report.pdf"
-  },
-  {
-   "type": "letter",
-   "title": {
-    "de": "Empfehlungsschreiben",
-    "en": "Recommendation letter",
-    "es": "Carta de recomendación"
-   },
-   "issuer": "Nemak R&D Director Dr. José Talamantes Silva",
-   "file": "assets/certificates/letter_of_recommendation_jose_pablo (JTSilva).pdf"
-  }
- ],
+    {
+      "type": "certificate",
+      "title": {
+        "de": "Goethe-Zertifikat B2",
+        "en": "Goethe Certificate B2",
+        "es": "Certificado Goethe B2"
+      },
+      "issuer": "Goethe-Institut",
+      "date": "2026",
+      "file": "assets/certificates/GOETHE-ZERTIFIKAT B2.pdf"
+    },
+    {
+      "type": "certificate",
+      "title": {
+        "de": "TOEFL ITP-Ergebnisbericht",
+        "en": "TOEFL ITP Score Report",
+        "es": "Informe de resultados del TOEFL ITP"
+      },
+      "issuer": "TOEFL ITP",
+      "date": "2025",
+      "file": "assets/certificates/TOEFL ITP Score Report.pdf"
+    },
+    {
+      "type": "certificate",
+      "title": {
+        "de": "Industrial Networking Essentials",
+        "en": "Industrial Networking Essentials",
+        "es": "Industrial Networking Essentials"
+      },
+      "issuer": "Rockwell Automation & Cisco",
+      "file": "assets/certificates/Industrial_Networking_Essentials_certificate_Rockwell+CISCO.pdf"
+    },
+    {
+      "type": "award",
+      "title": {
+        "de": "Herausragender Student – LIFE",
+        "en": "Outstanding Student – LIFE",
+        "es": "Alumno destacado LIFE"
+      },
+      "issuer": "LIFE",
+      "file": "assets/certificates/Alumno destacado LIFE.pdf"
+    },
+    {
+      "type": "award",
+      "title": {
+        "de": "Bronzemedaille – ISSSP SpaceMakers",
+        "en": "Bronze Medal – ISSSP SpaceMakers",
+        "es": "Medalla de bronce – ISSSP SpaceMakers"
+      },
+      "issuer": "ISSSP International Nano-Satellite Competition, Hongkong",
+      "date": "2024",
+      "note": {
+        "de": "Teamteilnahme im ersten Studienjahr; Beitrag im Bereich mechanisches Design.",
+        "en": "Team participation in my first year of studies; contribution to the mechanical design.",
+        "es": "Participación en equipo en mi primer año de carrera; apoyo en el diseño mecánico."
+      },
+      "file": "assets/certificates/Jose Rodriguez-Bronze Medal ISSSP SpaceMakers.pdf"
+    },
+    {
+      "type": "letter",
+      "title": {
+        "de": "Empfehlungsschreiben",
+        "en": "Recommendation letter",
+        "es": "Carta de recomendación"
+      },
+      "issuer": "Nemak R&D Director Dr. José Talamantes Silva",
+      "file": "assets/certificates/letter_of_recommendation_jose_pablo (JTSilva).pdf"
+    }
+  ],
  "projects": [
   {
    "id": "rockwell-automated-manufacturing-cell",
