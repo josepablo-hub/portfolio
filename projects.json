@@ -2,7 +2,11 @@
  "profile": {
   "name": "José Pablo",
   "photo": "assets/foto.jpg",
-  "cv": "assets/CV.pdf",
+  "cv": {
+   "de": "assets/CV/CV_Jose_Pablo_Rodriguez_Pinal_DE.pdf",
+   "en": "assets/CV/CV_Jose_Pablo_Rodriguez_Pinal_EN.pdf",
+   "es": "assets/CV/CV_Jose_Pablo_Rodriguez_Pinal_EN.pdf"
+  },
   "linkedin": "https://www.linkedin.com/in/jos%C3%A9-pablo-rodr%C3%ADguez-pinal-837588326/",
   "github": "https://github.com/josepablo-hub",
   "role": {
