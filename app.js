@@ -1,9 +1,9 @@
 const $ = s => document.querySelector(s);
 const u = p => encodeURI(p);
 const TXT = {
-  de: { exp: 'Berufserfahrung', projects: 'Projekte', certs: 'Zertifikate, Auszeichnungen & Empfehlungsschreiben', navc: 'Zertifikate & Awards', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', award: 'Auszeichnung', letter: 'Empfehlungsschreiben' },
-  en: { exp: 'Work Experience', projects: 'Projects', certs: 'Certifications, Awards & Recommendation Letters', navc: 'Certifications & Awards', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', award: 'Award', letter: 'Recommendation letter' },
-  es: { exp: 'Experiencia laboral', projects: 'Proyectos', certs: 'Certificaciones, reconocimientos y cartas de recomendación', navc: 'Certificaciones y reconocimientos', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', award: 'Reconocimiento', letter: 'Carta de recomendación' }
+  de: { exp: 'Berufserfahrung', projects: 'Projekte', certs: 'Zertifikate, Auszeichnungen & Empfehlungsschreiben', navc: 'Zertifikate & Awards', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', cad: 'CAD-Dateien', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', videos: 'Videos', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', award: 'Auszeichnung', letter: 'Empfehlungsschreiben' },
+  en: { exp: 'Work Experience', projects: 'Projects', certs: 'Certifications, Awards & Recommendation Letters', navc: 'Certifications & Awards', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', cad: 'CAD files', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', videos: 'Videos', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', award: 'Award', letter: 'Recommendation letter' },
+  es: { exp: 'Experiencia laboral', projects: 'Proyectos', certs: 'Certificaciones, reconocimientos y cartas de recomendación', navc: 'Certificaciones y reconocimientos', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', cad: 'Archivos CAD', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', videos: 'Videos', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', award: 'Reconocimiento', letter: 'Carta de recomendación' }
 };
 let DATA, lang = localStorage.getItem('lang') || 'de', tag = null, q = '', scrollTo = null;
 const t = k => TXT[lang][k];
@@ -118,8 +118,9 @@ function cards() {
 }
 
 function detail(p) {
-  const vid = p.video
-    ? `<iframe class="vid" src="https://www.youtube.com/embed/${p.video}" allowfullscreen loading="lazy"></iframe>`
+  const vids = p.videos && p.videos.length ? p.videos : (p.video ? [{ id: p.video }] : []);
+  const vid = vids.length
+    ? vids.map(v => `${v.title ? `<p style="margin:16px 0 8px;font-weight:600">${v.title[lang]}</p>` : ''}<iframe class="vid" src="https://www.youtube.com/embed/${v.id}" allowfullscreen loading="lazy"></iframe>`).join('')
     : `<div class="soon">${t('soon')}</div>`;
   $('#app').innerHTML = `
   <div class="det">
@@ -132,8 +133,9 @@ function detail(p) {
       ${p.report ? `<a class="btn p" href="${u(p.report)}" target="_blank">${t('report')}</a>` : ''}
       ${p.presentation ? `<a class="btn" href="${u(p.presentation)}" target="_blank">${t('pres')}</a>` : ''}
       ${p.code ? `<a class="btn" href="${p.code}" target="_blank">${t('code')}</a>` : ''}
+      ${p.cad ? `<a class="btn" href="${p.cad}" target="_blank">${t('cad')}</a>` : ''}
     </div>
-    <h2>${t('video')}</h2>${vid}
+    <h2>${vids.length > 1 ? t('videos') : t('video')}</h2>${vid}
     <h2>${t('photos')}</h2>
     <div class="gal">${p.photos.map(f => `<a href="${u(f)}" target="_blank"><img loading="lazy" src="${u(f)}" alt=""></a>`).join('')}</div>
   </div>
