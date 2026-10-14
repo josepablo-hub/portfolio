@@ -205,6 +205,59 @@
    "video": null
   },
   {
+    "id": "kemet-print-roll-handling-system",
+    "title": {
+      "de": "KEMET – Automatisches Rollenhandhabungssystem",
+      "en": "KEMET – Automated Print Roll Handling System",
+      "es": "KEMET – Sistema automatizado de manejo de rollos de impresión"
+    },
+    "year": "2025",
+    "summary": {
+      "de": "Mechanische Konstruktion, Strukturanalyse und Prototyp eines Handhabungssystems für bedruckte Materialrollen in der Kondensatorfertigung, dazu ein Bildverarbeitungssystem mit ESP32-CAM und OpenCV zur Prüfung der Drucke.",
+      "en": "Mechanical design, structural simulation and prototype of a handling system for printed material rolls used in capacitor manufacturing, plus an ESP32-CAM and OpenCV vision system to inspect the prints.",
+      "es": "Diseño mecánico, simulación estructural y prototipo de un sistema para manejar rollos de material impreso usados en la fabricación de capacitores, junto con un sistema de visión con ESP32-CAM y OpenCV para inspeccionar los prints."
+    },
+    "long": {
+      "de": "Entstanden im Kurs Materials Analysis and Manufacturing am Tecnológico de Monterrey als Industrie-Challenge mit KEMET. Ziel war ein System zur Handhabung der bedruckten Materialrollen aus der Kondensatorfertigung, das den manuellen Prüfaufwand verringert und hilft, Materialausschuss zu erkennen.\n\nDie mechanische Baugruppe wurde in SolidWorks über mehrere Iterationen entwickelt. Statische Strukturanalysen (FEM) zeigten Spannungskonzentrationen an Stützelementen und Verbindungen; diese wurden durch verstärkte Profile, bessere Stützen und eine angepasste Materialverteilung entschärft. Berücksichtigt wurden Lasten von bis zu 80 kg pro Stützarm. Das finale Konzept ist kompakter und an die vorhandene Anlage von KEMET angelehnt, mit Rollenaufnahmen und einem Spreizarm, der die Rollen sichert und stabilisiert.\n\nEin physischer Prototyp wurde gebaut, um Anordnung der Komponenten, mechanische Stabilität und allgemeine Funktion zu prüfen, bevor eine industrielle Fertigung in Betracht gezogen wird.\n\nZusätzlich wurde ein Bildverarbeitungssystem mit ESP32-CAM umgesetzt und getestet: Es nimmt Bilder der Druckmuster auf, die mit Python und OpenCV ausgewertet werden, um Muster zu analysieren, Drucke zu zählen und mögliche Druckfehler zu erkennen. Das System ist in den Videos unten dokumentiert (der Quellcode liegt nicht im Repository).\n\nTeamprojekt: Die Seite zeigt die Ingenieurarbeit des Teams und die Konstruktions- und Simulationsaufgaben, zu denen ich beigetragen habe.",
+      "en": "Developed in the Materials Analysis and Manufacturing course at Tecnológico de Monterrey as an industry challenge with KEMET. The goal was a handling system for the printed material rolls used in capacitor manufacturing, to reduce manual inspection time and help identify material waste.\n\nThe mechanical assembly was designed in SolidWorks over several iterations. Static structural simulations (FEA) revealed stress concentrations around support elements and connections, which were addressed with reinforced profiles, improved supports and a better material distribution. The design considered loads of up to 80 kg per support arm. The final concept is more compact and inspired by KEMET's existing equipment, with roll supports and an expanding arm that secures and stabilizes the rolls.\n\nA physical prototype was built to evaluate component arrangement, mechanical stability and general operation before considering full-scale industrial manufacturing.\n\nA computer vision system was also implemented and tested with an ESP32-CAM: it captures images of the printed patterns, which are processed with Python and OpenCV to support pattern analysis, print counting and the identification of potential printing defects. It is documented in the videos below (the source code is not included in the repository).\n\nTeam project: this page presents the team's engineering work and the mechanical design and simulation activities I contributed to.",
+      "es": "Desarrollado en el curso Materials Analysis and Manufacturing del Tecnológico de Monterrey como reto industrial con KEMET. El objetivo era un sistema para manejar los rollos de material impreso usados en la fabricación de capacitores, que reduzca el tiempo de inspección manual y ayude a identificar desperdicio de material.\n\nEl ensamble mecánico se diseñó en SolidWorks en varias iteraciones. Las simulaciones estructurales estáticas (FEA) mostraron concentraciones de esfuerzo en los elementos de soporte y las uniones, que se atendieron con perfiles reforzados, mejores soportes y una distribución de material ajustada. El diseño consideró cargas de hasta 80 kg por brazo de soporte. El concepto final es más compacto e inspirado en el equipo existente de KEMET, con soportes para los rollos y un brazo expansivo que los sujeta y estabiliza.\n\nSe construyó un prototipo físico para evaluar la disposición de los componentes, la estabilidad mecánica y el funcionamiento general antes de considerar una fabricación industrial a escala.\n\nTambién se implementó y probó un sistema de visión por computadora con ESP32-CAM: captura imágenes de los patrones impresos, que se procesan con Python y OpenCV para apoyar el análisis de patrones, el conteo de prints y la identificación de posibles defectos de impresión. Está documentado en los videos de abajo (el código fuente no está incluido en el repositorio).\n\nProyecto en equipo: esta página presenta el trabajo de ingeniería del equipo y las actividades de diseño mecánico y simulación en las que contribuí."
+    },
+    "tags": [
+      "CAD",
+      "Simulation",
+      "ComputerVision",
+      "Mechatronics"
+    ],
+    "cover": "projects/kemet-print-roll-handling-system/photos/mecanismo principal.jpeg",
+    "photos": [
+      "projects/kemet-print-roll-handling-system/photos/mecanismo principal.jpeg",
+      "projects/kemet-print-roll-handling-system/photos/vista prints.jpeg"
+    ],
+    "report": "projects/kemet-print-roll-handling-system/final-report/Reporte Final (Reto - KEMET).pdf",
+    "presentation": "projects/kemet-print-roll-handling-system/presentation/Contador Cover y Prints Presentación.pdf",
+    "code": null,
+    "cad": "https://github.com/josepablo-hub/portfolio/tree/main/projects/kemet-print-roll-handling-system/CAD",
+    "videos": [
+      {
+        "id": "0Vw67nCzcyI",
+        "title": {
+          "de": "Cover- & Print-Zähler: ESP32-CAM- und OpenCV-Bildverarbeitungssystem",
+          "en": "Cover & Prints Counter: ESP32-CAM and OpenCV Vision System",
+          "es": "Contador de covers y prints: sistema de visión con ESP32-CAM y OpenCV"
+        }
+      },
+      {
+        "id": "j-0NCRBt9N8",
+        "title": {
+          "de": "CAD-Video",
+          "en": "CAD Video",
+          "es": "Video del CAD"
+        }
+      }
+    ],
+    "video": null
+  },
+  {
    "id": "project-02-robotic-arm",
    "title": {
     "de": "Assistiver Fütterungsroboter (3 DOF)",
