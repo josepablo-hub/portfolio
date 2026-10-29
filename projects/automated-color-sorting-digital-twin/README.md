@@ -221,7 +221,8 @@ Overall, the work provided hands-on experience in industrial automation, virtual
 
 ## Project Information
 
-Course: Automation Manufacturing Systems 
+Course: Automation Manufacturing Systems
+
 Institution: Tecnológico de Monterrey, Campus Monterrey
 Date: May 2026
 
