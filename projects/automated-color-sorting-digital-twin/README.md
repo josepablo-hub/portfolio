@@ -64,44 +64,6 @@ This approach simulated color-based sorting using height measurements as a proxy
 
 ---
 
-## Repository Structure
-
-```text
-automated-color-sorting-digital-twin/
-│
-├── README.md
-│
-├── Emulate3D/
-│   └── Digital twin project files
-│
-├── SolidWorks/
-│   ├── Parts/
-│   └── Assemblies/
-│
-├── PLC/
-│   └── Studio 5000 project files
-│
-└── Media/
-    ├── images/
-    └── demo-video.mp4
-```
-
-*Note: The directory structure above represents the proposed organization. Adapt it to the files actually included in the repository.*
-
----
-
-## Project Demonstration
-
-The `Media/` directory can contain screenshots and a demonstration video illustrating:
-
-- The overall sorting line and digital twin.
-- The box identification and sorting sequence.
-- The stopper and pneumatic cylinder operation.
-- The PLC control logic.
-- The mechanical CAD design.
-
----
-
 ## Project Objective
 
 The objective was to develop and simulate an automated material-handling system capable of sorting boxes into six different outputs.
