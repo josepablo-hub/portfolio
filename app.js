@@ -1,11 +1,11 @@
 const $ = s => document.querySelector(s);
-const u = p => encodeURI(p);
+const u = p => /^https?:\/\//.test(p) ? p : encodeURI(p);
 const TXT = {
-  de: { exp: 'Berufserfahrung', projects: 'Projekte', certs: 'Zertifikate, Auszeichnungen & Empfehlungsschreiben', navc: 'Zertifikate & Awards', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', cad: 'CAD-Dateien', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', videos: 'Videos', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', award: 'Auszeichnung', letter: 'Empfehlungsschreiben' },
-  en: { exp: 'Work Experience', projects: 'Projects', certs: 'Certifications, Awards & Recommendation Letters', navc: 'Certifications & Awards', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', cad: 'CAD files', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', videos: 'Videos', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', award: 'Award', letter: 'Recommendation letter' },
-  es: { exp: 'Experiencia laboral', projects: 'Proyectos', certs: 'Certificaciones, reconocimientos y cartas de recomendación', navc: 'Certificaciones y reconocimientos', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', cad: 'Archivos CAD', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', videos: 'Videos', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', award: 'Reconocimiento', letter: 'Carta de recomendación' }
+  de: { exp: 'Berufserfahrung', projects: 'Projekte', certs: 'Zertifikate, Auszeichnungen & Empfehlungsschreiben', navc: 'Zertifikate & Awards', all: 'Alle', search: 'Projekt suchen…', back: '← Zurück', report: 'Abschlussbericht', cad: 'CAD-Dateien', pres: 'Präsentation', code: 'Code ansehen', photos: 'Fotos', video: 'Video', videos: 'Videos', soon: 'Video folgt in Kürze', cv: 'Lebenslauf herunterladen', none: 'Keine Ergebnisse', hi: 'Hallo, ich bin', empty: 'Zertifikate und Empfehlungsschreiben folgen in Kürze.', open: 'Öffnen', cert: 'Zertifikat', award: 'Auszeichnung', letter: 'Empfehlungsschreiben', studio: 'Studio-5000-Projekt herunterladen', ladder: 'Ladder-Diagramm (PDF)', emulate: 'Emulate-3D-Datei herunterladen', solidworks: 'SolidWorks-Dateien ansehen' },
+  en: { exp: 'Work Experience', projects: 'Projects', certs: 'Certifications, Awards & Recommendation Letters', navc: 'Certifications & Awards', all: 'All', search: 'Search projects…', back: '← Back', report: 'Final report', cad: 'CAD files', pres: 'Presentation', code: 'View code', photos: 'Photos', video: 'Video', videos: 'Videos', soon: 'Video coming soon', cv: 'Download CV', none: 'No results', hi: "Hi, I'm", empty: 'Certificates and recommendation letters coming soon.', open: 'Open', cert: 'Certificate', award: 'Award', letter: 'Recommendation letter', studio: 'Download Studio 5000 project', ladder: 'Ladder diagram (PDF)', emulate: 'Download Emulate 3D file', solidworks: 'View SolidWorks files' },
+  es: { exp: 'Experiencia laboral', projects: 'Proyectos', certs: 'Certificaciones, reconocimientos y cartas de recomendación', navc: 'Certificaciones y reconocimientos', all: 'Todos', search: 'Buscar proyecto…', back: '← Volver', report: 'Reporte final', cad: 'Archivos CAD', pres: 'Presentación', code: 'Ver código', photos: 'Fotos', video: 'Video', videos: 'Videos', soon: 'Video próximamente', cv: 'Descargar CV', none: 'Sin resultados', hi: 'Hola, soy', empty: 'Certificados y cartas de recomendación próximamente.', open: 'Abrir', cert: 'Certificado', award: 'Reconocimiento', letter: 'Carta de recomendación', studio: 'Descargar proyecto de Studio 5000', ladder: 'Ladder de Studio 5000 (PDF)', emulate: 'Descargar archivo de Emulate 3D', solidworks: 'Ver archivos de SolidWorks' }
 };
-let DATA, lang = localStorage.getItem('lang') || 'de', tag = null, q = '', scrollTo = null;
+let DATA, lang = localStorage.getItem('lang') || 'de', tag = null, q = '', pendingScroll = null;
 const t = k => TXT[lang][k];
 const tn = k => (DATA.tagNames[k] || {})[lang] || k;
 // CV por idioma: DE -> versión en alemán; EN y ES -> versión en inglés
@@ -22,11 +22,11 @@ async function init() {
   }
   document.querySelectorAll('.langs button').forEach(b => b.onclick = () => { lang = b.dataset.l; localStorage.setItem('lang', lang); render(); });
   document.querySelectorAll('nav a[data-s]').forEach(a => a.onclick = () => {
-    scrollTo = a.dataset.s;
+    pendingScroll = a.dataset.s;
     if (location.hash.length > 2) return; // hashchange will render
     setTimeout(() => { render(); }, 0);
   });
-  window.addEventListener('hashchange', () => { if (!scrollTo) window.scrollTo(0, 0); render(); });
+  window.addEventListener('hashchange', () => { if (!pendingScroll) window.scrollTo(0, 0); render(); });
   render();
 }
 
@@ -37,8 +37,8 @@ function render() {
   const m = location.hash.match(/^#\/p\/(.+)$/);
   const p = m && DATA.projects.find(x => x.id === decodeURIComponent(m[1]));
   p ? detail(p) : home();
-  if (scrollTo && !p) { const el = document.getElementById(scrollTo); el && el.scrollIntoView({ behavior: 'smooth' }); }
-  scrollTo = null;
+  if (pendingScroll && !p) { const el = document.getElementById(pendingScroll); el && el.scrollIntoView({ behavior: 'smooth' }); }
+  pendingScroll = null;
 }
 
 function home() {
@@ -134,6 +134,7 @@ function detail(p) {
       ${p.presentation ? `<a class="btn" href="${u(p.presentation)}" target="_blank">${t('pres')}</a>` : ''}
       ${p.code ? `<a class="btn" href="${p.code}" target="_blank">${t('code')}</a>` : ''}
       ${p.cad ? `<a class="btn" href="${p.cad}" target="_blank">${t('cad')}</a>` : ''}
+      ${(p.downloads || []).map(d => `<a class="btn" href="${u(d.file)}" ${d.download ? 'download' : 'target="_blank"'}>${t(d.k)}</a>`).join('')}
     </div>
     <h2>${vids.length > 1 ? t('videos') : t('video')}</h2>${vid}
     <h2>${t('photos')}</h2>
