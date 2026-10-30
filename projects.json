@@ -31,6 +31,11 @@
    "en": "Mechatronics",
    "es": "Mecatrónica"
   },
+  "DigitalTwin": { 
+   "de": "Digitaler Zwilling", 
+   "en": "Digital twin", 
+   "es": "Gemelo digital" 
+  },
   "FuzzyControl": {
    "de": "Fuzzy-Regelung",
    "en": "Fuzzy control",
@@ -205,6 +210,45 @@
    "code": "https://github.com/josepablo-hub/portfolio/tree/main/projects/rockwell-automated-manufacturing-cell/code",
    "video": "GyAIFHSpy_4"
   },
+  {
+  "id": "automated-color-sorting-digital-twin",
+  "title": {
+    "de": "Automatisierte Sortierlinie – Digitaler Zwilling & PackML",
+    "en": "Automated Sorting Line – Digital Twin & PackML",
+    "es": "Línea de clasificación automatizada – Gemelo digital y PackML"
+  },
+  "year": "2026",
+  "summary": {
+    "de": "Förderband-Sortieranlage mit digitalem Zwilling in Emulate3D, virtueller SPS in Studio 5000 und FactoryTalk Logix Echo sowie PackML-Zustandsarchitektur.",
+    "en": "Conveyor sorting line with an Emulate3D digital twin, a virtual PLC running Studio 5000 and FactoryTalk Logix Echo, and a PackML state-based architecture.",
+    "es": "Línea de clasificación con banda transportadora, gemelo digital en Emulate3D, PLC virtual con Studio 5000 y FactoryTalk Logix Echo, y arquitectura de estados PackML."
+  },
+  "long": {
+    "de": "Entstanden im Kurs Automation Manufacturing Systems am Tecnológico de Monterrey (Mai 2026). Ziel war ein automatisiertes Materialhandhabungssystem, das Boxen nach ihrer zugeordneten Farbe auf sechs Ausgänge sortiert – vollständig in einer virtuellen Umgebung: ein digitaler Zwilling der Förderanlage in Rockwell Automation Emulate3D, gesteuert von einem Ladder-Logic-Programm in Studio 5000 Logix Designer, das auf einer virtuellen SPS in FactoryTalk Logix Echo läuft. Zwilling und Steuerung tauschen Sensorsignale, Betriebszustände und Aktorbefehle über EtherNet/IP aus.\n\nDie Farberkennung wird ohne physischen Farbsensor simuliert: Jede Box hat eine andere Höhe, die ein virtueller Distanzsensor misst. Die SPS vergleicht den Messwert mit LIM-Anweisungen mit definierten Bereichen und weist BoxType per MOV eine Ganzzahl zu (zum Beispiel 0,18–0,20 m für Grün und 0,20–0,22 m für Blau). Kollisionssensoren erkennen die Box an ihrer Station, der passende Stopper positioniert sie, und nach einer TON-Verzögerung schiebt der zugehörige Pneumatikzylinder sie zu ihrem Ausgang (Grün, Gelb, Rot, Blau, Violett, Orange). Ein CycleDone-Signal setzt die gespeicherten Bits mit OTU-Anweisungen zurück.\n\nDer Betriebsablauf folgt dem PackML-Standard (ANSI/ISA TR88.00.02-2015) mit Schwerpunkt auf dem Modus PRODUCTION und den Zuständen IDLE, STARTING, EXECUTE, COMPLETING, COMPLETE, RESETTING, STOPPED und ABORTED.\n\nHerausforderungen: die Synchronisation kurzer Sensorsignale (gelöst mit gespeicherten Bits und einem Zyklusende-Signal), Aktoren, die im Emulate3D-Modell wegen ihrer Ausrichtung in die Gegenrichtung reagierten (gelöst durch Trennung der internen Steuerlogik von den physischen Ausgängen und Invertierung auf der Ausgangsebene) sowie eine zuverlässige Kommunikation zwischen SPS und Zwilling (gelöst mit EtherNet/IP zwischen Emulate3D und Logix Echo). Die virtuelle Umgebung erlaubte es, den Steuerungsablauf ohne physische Förderanlage oder SPS-Hardware zu testen.",
+    "en": "Developed in the Automation Manufacturing Systems course at Tecnológico de Monterrey (May 2026). The goal was an automated material-handling system that sorts boxes into six outputs according to their assigned colors, entirely in a virtual environment: a digital twin of the conveyor line in Rockwell Automation Emulate3D, controlled by a Ladder Logic program in Studio 5000 Logix Designer running on a virtual PLC in FactoryTalk Logix Echo. The twin and the controller exchange sensor signals, operating states and actuator commands over EtherNet/IP.\n\nColor detection is simulated without a physical color sensor: each box has a different height, which a virtual distance sensor measures. The PLC compares the measurement against defined ranges with LIM instructions and assigns an integer to BoxType with MOV (for example 0.18–0.20 m for green and 0.20–0.22 m for blue). Collision sensors then detect the box at its station, the matching stopper positions it, and after a TON delay the corresponding pneumatic piston pushes it to its output (green, yellow, red, blue, purple, orange). A CycleDone signal clears the latched bits with OTU instructions.\n\nThe operating sequence follows the PackML standard (ANSI/ISA TR88.00.02-2015), with emphasis on PRODUCTION mode and the states IDLE, STARTING, EXECUTE, COMPLETING, COMPLETE, RESETTING, STOPPED and ABORTED.\n\nChallenges: synchronizing momentary sensor signals (solved with latched bits and a cycle-completion signal), actuators that responded in the opposite direction in the Emulate3D model because of their orientation (solved by separating the internal control logic from the physical outputs and inverting at the output layer), and reliable PLC-to-twin communication (solved with EtherNet/IP between Emulate3D and Logix Echo). The virtual setup made it possible to test the control sequence without a physical conveyor or PLC hardware.",
+    "es": "Desarrollado en el curso Automation Manufacturing Systems del Tecnológico de Monterrey (mayo 2026). El objetivo era un sistema automatizado de manejo de materiales que clasifica cajas en seis salidas según su color asignado, todo en un entorno virtual: un gemelo digital de la línea de transporte en Rockwell Automation Emulate3D, controlado por un programa en Ladder de Studio 5000 Logix Designer que corre en un PLC virtual con FactoryTalk Logix Echo. El gemelo y el controlador intercambian señales de sensores, estados de operación y comandos de actuadores por EtherNet/IP.\n\nLa detección de color se simula sin un sensor de color físico: cada caja tiene una altura distinta, que mide un sensor de distancia virtual. El PLC compara la medición con rangos definidos mediante instrucciones LIM y asigna un entero a BoxType con MOV (por ejemplo 0.18–0.20 m para verde y 0.20–0.22 m para azul). Después, sensores de colisión detectan la caja en su estación, el tope correspondiente la posiciona y, tras un retardo con TON, el pistón neumático correspondiente la empuja a su salida (verde, amarillo, rojo, azul, morado, naranja). Una señal CycleDone limpia los bits enclavados con instrucciones OTU.\n\nLa secuencia de operación sigue el estándar PackML (ANSI/ISA TR88.00.02-2015), con énfasis en el modo PRODUCTION y los estados IDLE, STARTING, EXECUTE, COMPLETING, COMPLETE, RESETTING, STOPPED y ABORTED.\n\nRetos: la sincronización de señales momentáneas de los sensores (resuelta con bits enclavados y una señal de fin de ciclo), actuadores que respondían en sentido contrario en el modelo de Emulate3D por su orientación (resuelto separando la lógica interna de las salidas físicas e invirtiendo en la capa de salida) y una comunicación confiable entre el PLC y el gemelo (resuelta con EtherNet/IP entre Emulate3D y Logix Echo). El entorno virtual permitió probar la secuencia de control sin una banda física ni hardware de PLC."
+  },
+  "tags": ["PLC", "Automation", "DigitalTwin", "Simulation"],
+  "cover": "projects/automated-color-sorting-digital-twin/photos/SortingLine.png",
+  "photos": [
+    "projects/automated-color-sorting-digital-twin/photos/SortingLine.png",
+    "projects/automated-color-sorting-digital-twin/photos/Box Type detection Studio5000.png",
+    "projects/automated-color-sorting-digital-twin/photos/Position Detection Studio5000.png",
+    "projects/automated-color-sorting-digital-twin/photos/Plunger Activation Studio5000.png",
+    "projects/automated-color-sorting-digital-twin/photos/InitalConditions and Loads Studio 5000.png",
+    "projects/automated-color-sorting-digital-twin/photos/Restart Conditions Studio5000.png"
+  ],
+  "report": "projects/automated-color-sorting-digital-twin/final-report/Integración de Gemelo Digital y PackML en Sistema de Clasificación Automatizada.pdf",
+  "presentation": null,
+  "code": null,
+  "downloads": [
+    { "k": "studio", "file": "projects/automated-color-sorting-digital-twin/PLC/ProductSortingConveyor.ACD", "download": true },
+    { "k": "ladder", "file": "projects/automated-color-sorting-digital-twin/PLC/LadderProgrammProjectSortingLineFinal.pdf" },
+    { "k": "emulate", "file": "projects/automated-color-sorting-digital-twin/Emulate3D/Product Sorting Conveyor.demo3d", "download": true },
+    { "k": "solidworks", "file": "https://github.com/josepablo-hub/portfolio/tree/main/projects/automated-color-sorting-digital-twin/SolidWorks" }
+  ],
+  "video": "NXJkWqDec8U"
+},
   {
     "id": "kemet-print-roll-handling-system",
     "title": {
