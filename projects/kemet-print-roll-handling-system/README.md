@@ -91,4 +91,4 @@ The project demonstrated how CAD modeling, structural simulation, and physical p
 * **Project Date:** May 2025
 * **Project Type:** Team-based engineering project
 
-*This project was developed collaboratively. The repository presents the team's engineering work and the mechanical design and simulation activities to which I contributed.*
+*This project was developed collaboratively. I contributed to all three parts — CAD design, structural simulation and the ESP32-CAM vision system — mainly CAD and vision.*

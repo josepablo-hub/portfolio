@@ -127,7 +127,7 @@ The controller design aims to improve positioning behavior and provide controlle
 
 ## Computer Vision
 
-Computer vision was incorporated into the project to investigate **papaya maturity classification**.
+Computer vision was incorporated using **YOLO in Python** to detect **papaya maturity** and whether the fruit is **correctly placed on the plate**.
 
 The objective is to use image data to distinguish maturity conditions relevant to food selection in the proposed assistive feeding application.
 
@@ -187,3 +187,13 @@ The work did not constitute a fully validated physical feeding robot. Additional
 * Verónica Ixtchel Aculco Alva
 * Maximiliano Mireles Escobar
 * Gabriela Lizeth Peña Zuñiga
+
+---
+
+## Project Information
+
+* **Institution:** Tecnológico de Monterrey, in collaboration with INAOE
+* **Project Date:** January 2026
+* **Project Type:** Team-based engineering project
+
+*My main contribution: forward and inverse kinematics, the dynamic model and PD control with gravity compensation (MATLAB, RoboDK). I also worked on the YOLO-based detection.*

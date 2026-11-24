@@ -100,7 +100,7 @@ The main elements include:
 - Ventilation fan
 - Logic signals
 
-Detailed electrical schematics are available in the `schematics/` directory.
+Detailed electrical schematics are available in the `photos/` directory.
 
 ---
 
@@ -120,9 +120,11 @@ The system was designed to demonstrate the feasibility of using engine-generated
 
 ## Simulation
 
-The electrical control system was simulated before implementation to validate the behavior of the signal conditioning and control circuits.
+The electrical control system was simulated in **LTspice** before implementation to validate the behavior of the signal conditioning and control circuits.
 
-Simulation files and relevant results are available in the `simulations/` directory.
+Key design values from the report: ±15 V op-amp supply; the LM35 signal is amplified by a factor of 10 (100 kΩ / 10 kΩ) and level-shifted; the hysteresis stage has a width of 10 V; the fan is switched through an IRFZ44N MOSFET from an external 9 V supply.
+
+Simulation files and relevant results are available in the `photos/` directory.
 
 ---
 
@@ -158,4 +160,14 @@ The resulting system provides a functional simulation of thermal energy recovery
 
 ### Technologies & Concepts
 
-`Operational Amplifiers` · `Analog Control` · `LM35` · `Thermistor` · `Signal Conditioning` · `ON/OFF Control` · `Hysteresis` · `Circuit Simulation`
+`Operational Amplifiers` · `Analog Control` · `LM35` · `Thermistor` · `Signal Conditioning` · `ON/OFF Control` · `Hysteresis` · `Circuit Simulation` · `LTspice`
+
+---
+
+## Project Information
+
+- **Institution:** Tecnológico de Monterrey
+- **Project Date:** October 2025
+- **Project Type:** Team-based engineering project (4 students)
+
+*I designed and configured the op-amp circuits and simulated them in LTspice.*
